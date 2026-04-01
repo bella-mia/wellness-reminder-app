@@ -50,7 +50,7 @@ class WellnessApp(rumps.App):
             icon_menu[icon] = rumps.MenuItem(icon, callback=self.change_icon)
 
         self.menu = [
-            rumps.MenuItem("Wellness Reminders", callback=None),   # header (non-clickable)
+            rumps.MenuItem("Wellness Reminders", callback=None),
             None,
             self.items["water"],
             self.items["blink"],
@@ -85,39 +85,30 @@ class WellnessApp(rumps.App):
         t.start()
         self.timers[key] = t
 
+    # ── Notification helper ────────────────────────────────────────────────────
+
+    def _notify(self, title, message):
+        """Send a notification via osascript — works on all Macs, no permission setup needed."""
+        script = f'display notification "{message}" with title "{title}"'
+        subprocess.run(["osascript", "-e", script])
+
     # ── Notification alerts ────────────────────────────────────────────────────
 
     def _water_alert(self, _):
         if self.active["water"]:
-            rumps.notification(
-                title="Hydration Time! 💧",
-                subtitle="",
-                message="Grab a glass of water — your body will thank you!",
-            )
+            self._notify("Hydration Time! 💧", "Grab a glass of water — your body will thank you!")
 
     def _blink_alert(self, _):
         if self.active["blink"]:
-            rumps.notification(
-                title="Remember to Blink! 👁️",
-                subtitle="",
-                message="Blink several times and look 20 ft away for 20 seconds.",
-            )
+            self._notify("Remember to Blink! 👁️", "Blink several times and look 20 ft away for 20 seconds.")
 
     def _posture_alert(self, _):
         if self.active["posture"]:
-            rumps.notification(
-                title="Sit Up Straight! 🪑",
-                subtitle="",
-                message="Shoulders back, feet flat, screen at eye level. You got this!",
-            )
+            self._notify("Sit Up Straight! 🪑", "Shoulders back, feet flat, screen at eye level. You got this!")
 
     def _break_alert(self, _):
         if self.active["break"]:
-            rumps.notification(
-                title="Break Time! ☕",
-                subtitle="",
-                message="Step away for 5 mins — stretch, walk around, breathe. You've earned it!",
-            )
+            self._notify("Break Time! ☕", "Step away for 5 mins — stretch, walk around, breathe. You've earned it!")
 
     # ── Toggle on/off from menu ────────────────────────────────────────────────
 
@@ -145,12 +136,12 @@ class WellnessApp(rumps.App):
     # ── Change menu bar icon ───────────────────────────────────────────────────
 
     def change_icon(self, sender):
-        self.title = sender.title   # sender.title is the emoji that was clicked
+        self.title = sender.title
 
     # ── Adjust intervals ───────────────────────────────────────────────────────
 
     def adjust_intervals(self, _):
-        response = rumps.alert(
+        rumps.alert(
             title="Adjust Intervals",
             message=(
                 "Current intervals:\n\n"
@@ -158,7 +149,7 @@ class WellnessApp(rumps.App):
                 f"  👁️ Blink:   every {self.intervals['blink']  // 60} min\n"
                 f"  🪑 Posture: every {self.intervals['posture']// 60} min\n"
                 f"  ☕ Break:   every {self.intervals['break']  // 60} min\n\n"
-                "To change intervals, edit wellness_app.py and\n"
+                "To change intervals, open wellness_app.py and\n"
                 "update the numbers in the 'intervals' dictionary."
             ),
             ok="Got it!",
