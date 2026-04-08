@@ -76,6 +76,18 @@ Go to System Settings → Notifications → Terminal (or Python) → turn on All
 
 ---
 
+## 🛠️ Swift / iOS Expansion
+
+Alongside the original Python menu bar app, I've been building native Swift versions:
+
+* **DayToDay (macOS)** — a SwiftUI rewrite of the menu bar experience with a dashboard view, profile, and wellness manager
+* **DayToDay Mobile (iOS)** — a companion iOS app with dedicated reminders, stats, and profile views built in SwiftUI
+* **WellnessReminders** — an earlier SwiftUI prototype that informed the current architecture
+
+Both Xcode projects live in the `DayToDay/` directory.
+
 ## License
 
-MIT — free to use, share, and modify.
+© 2026 Isabella Castillo. All rights reserved.
+
+This repository is public for portfolio and demonstration purposes only. No permission is granted to use, copy, modify, or distribute this code without explicit written permission from the author.
