@@ -26,10 +26,11 @@ A lightweight macOS menu bar app that keeps your health in check while you work 
 ## Installation
 
 1. Clone or download this repo
-2. Double-click **`start.command`**
-3. If macOS blocks it the first time: right-click → **Open** → **Open**
-4. Allow notifications when prompted
-5. Look for **💙** in your menu bar — you're all set!
+2. Open the `python/` folder
+3. Double-click **`▶️ Start Wellness App.command`**
+4. If macOS blocks it the first time: right-click → **Open** → **Open**
+5. Allow notifications when prompted
+6. Look for **💙** in your menu bar — you're all set!
 
 The first launch installs the one required package (`rumps`) automatically.
 
@@ -49,7 +50,7 @@ To restart, just double-click `start.command` again.
 
 ## Customizing Intervals
 
-Open `wellness_app.py` and edit the `intervals` dictionary near the top:
+Open `python/wellness_app.py` and edit the `intervals` dictionary near the top:
 
 ```python
 self.intervals = {
