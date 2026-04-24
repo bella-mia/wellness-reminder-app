@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — DayToDay</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #03045e;
+      color: #caf0f8;
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 2.5rem 0 2rem;
+      border-bottom: 1px solid #0077b6;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #00b4d8;
+      letter-spacing: -0.5px;
+    }
+
+    header .app-name {
+      font-size: 1.1rem;
+      color: #90e0ef;
+      margin-top: 0.4rem;
+    }
+
+    header .date {
+      font-size: 0.85rem;
+      color: #0096c7;
+      margin-top: 0.75rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #00b4d8;
+      margin: 2rem 0 0.75rem;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #caf0f8;
+      margin-bottom: 0.75rem;
+    }
+
+    a { color: #00b4d8; }
+    a:hover { color: #90e0ef; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 0.6rem 0.75rem;
+      background: #0077b6;
+      color: #caf0f8;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #023e8a;
+      vertical-align: top;
+      color: #caf0f8;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: rgba(0, 119, 182, 0.12); }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 1rem;
+    }
+
+    ul li {
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+      color: #caf0f8;
+      line-height: 1.6;
+    }
+
+    ul li::before {
+      content: "✕";
+      position: absolute;
+      left: 0;
+      color: #0096c7;
+      font-size: 0.75rem;
+      top: 0.45rem;
+    }
+
+    .highlight-box {
+      background: rgba(0, 180, 216, 0.08);
+      border-left: 3px solid #00b4d8;
+      padding: 1rem 1.25rem;
+      border-radius: 0 6px 6px 0;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .highlight-box p { margin: 0; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #0077b6;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #0096c7;
+    }
+
+    footer a { color: #00b4d8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="app-name">DayToDay</div>
+      <h1>Privacy Policy</h1>
+      <div class="date">Effective date: April 24, 2026</div>
+    </header>
+
+    <div class="highlight-box">
+      <p>All of your data stays on your own devices. We do not collect, transmit, or sell any personal information.</p>
+    </div>
+
+    <h2>Data We Store</h2>
+    <p>DayToDay stores the following information locally on your device:</p>
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reminder names, emojis, colors, and notification text</td>
+          <td>Display and schedule your wellness reminders</td>
+        </tr>
+        <tr>
+          <td>Reminder intervals and active/inactive state</td>
+          <td>Determine when to send notifications</td>
+        </tr>
+        <tr>
+          <td>Profile name and avatar emoji</td>
+          <td>Personalize your in-app experience</td>
+        </tr>
+        <tr>
+          <td>Daily and all-time completion counts</td>
+          <td>Show your stats and streak</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This data is stored using Apple's standard <code>UserDefaults</code> mechanism on your device.</p>
+
+    <h2>iCloud Sync</h2>
+    <p>If you have iCloud enabled, DayToDay uses Apple's <code>NSUbiquitousKeyValueStore</code> to sync your reminders across your Apple devices signed into the same iCloud account. This data is stored in <em>your</em> personal iCloud account and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. We have no access to it.</p>
+
+    <h2>Notifications</h2>
+    <p>DayToDay schedules local notifications using Apple's notification system. Notifications are generated entirely on your device — no notification content is sent to any server. You can disable notifications at any time in your device's Settings app.</p>
+
+    <h2>What We Do Not Collect</h2>
+    <ul>
+      <li>No analytics or usage data</li>
+      <li>No advertising or tracking SDKs</li>
+      <li>No account credentials or email address</li>
+      <li>No data sent to any server or database</li>
+      <li>No data shared with third parties</li>
+    </ul>
+
+    <h2>Children's Privacy</h2>
+    <p>DayToDay does not knowingly collect personal information from children under 13. The app requires no account creation and collects no data on our end.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we update this policy, we will revise the effective date above. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact</h2>
+    <p>Questions or concerns? Reach us at <a href="mailto:isabella@mpsinc.io">isabella@mpsinc.io</a></p>
+
+    <footer>
+      &copy; 2026 Isabella Castillo &nbsp;·&nbsp; <a href="mailto:isabella@mpsinc.io">isabella@mpsinc.io</a>
+    </footer>
+  </div>
+</body>
+</html>
