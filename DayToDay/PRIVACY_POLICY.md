@@ -65,6 +65,4 @@ If we update this policy, we will revise the effective date at the top of this d
 
 ## Contact
 
-Questions or concerns about this policy?
-
-**Email:** isabella@mpsinc.io
+Questions or concerns about this policy? Contact us through the App Store support page.
